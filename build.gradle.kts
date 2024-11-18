@@ -30,4 +30,9 @@ dependencies {
     implementation("io.ktor:ktor-server-config-yaml-jvm")
     testImplementation("io.ktor:ktor-server-test-host-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+
+    // database mysql
+    implementation("mysql:mysql-connector-java:8.0.26")
+    implementation("org.ktorm:ktorm-core:3.4.0")
+    implementation("org.ktorm:ktorm-support-mysql:3.4.0")
 }
