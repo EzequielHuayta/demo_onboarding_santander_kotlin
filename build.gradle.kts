@@ -22,17 +22,25 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-server-core-jvm")
-    implementation("io.ktor:ktor-server-content-negotiation-jvm")
-    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
-    implementation("io.ktor:ktor-server-netty-jvm")
+    implementation("io.ktor:ktor-server-core-jvm:3.0.1")
+    implementation("io.ktor:ktor-server-content-negotiation-jvm:3.0.1")
+    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:3.0.1")
+    implementation("io.ktor:ktor-server-netty-jvm:3.0.1")
     implementation("ch.qos.logback:logback-classic:$logback_version")
-    implementation("io.ktor:ktor-server-config-yaml-jvm")
-    testImplementation("io.ktor:ktor-server-test-host-jvm")
+    implementation("io.ktor:ktor-server-config-yaml-jvm:3.0.1")
+    testImplementation("io.ktor:ktor-server-test-host-jvm:3.0.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
     // database mysql
-    implementation("mysql:mysql-connector-java:8.0.26")
+    implementation("mysql:mysql-connector-java:8.0.28")
     implementation("org.ktorm:ktorm-core:3.4.0")
     implementation("org.ktorm:ktorm-support-mysql:3.4.0")
+
+    // ktor client
+    implementation("io.ktor:ktor-client-core-jvm:3.0.1")
+    implementation("io.ktor:ktor-client-cio-jvm:3.0.1")
+    implementation("io.ktor:ktor-client-json-jvm:3.0.1")
+    implementation("io.ktor:ktor-client-serialization-jvm:3.0.1")
+    implementation("io.ktor:ktor-client-content-negotiation:3.0.1")
+
 }
