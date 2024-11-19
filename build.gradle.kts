@@ -43,4 +43,17 @@ dependencies {
     implementation("io.ktor:ktor-client-serialization-jvm:3.0.1")
     implementation("io.ktor:ktor-client-content-negotiation:3.0.1")
 
+
+    // Dependency Injection (Koin)
+    implementation("io.insert-koin:koin-core:3.3.1")
+    implementation("io.insert-koin:koin-ktor:3.3.1")
+
+    //Logging
+    implementation("org.slf4j:slf4j-api:2.0.7")
+    implementation("ch.qos.logback:logback-classic:1.4.11")
+
+    //status pages para manejo de errores
+    implementation("io.ktor:ktor-server-status-pages:3.0.1")
+
+
 }

@@ -3,22 +3,19 @@ package santander.com.example
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import santander.com.example.repository.RandomUserRepository
-import santander.com.example.repository.impl.RandomUserRepositoryImpl
+import org.koin.ktor.ext.inject
 import santander.com.example.routes.randomUserRoutes
 import santander.com.example.services.RandomUserService
-import santander.com.example.services.impl.RandomUserServiceImpl
+import santander.com.example.routes.loginRoutes
+import santander.com.example.services.UsuarioService
 
 fun Application.configureRouting() {
 
-    val randomUserRepository = RandomUserRepositoryImpl()
-    val randomUserService = RandomUserServiceImpl(randomUserRepository)
-
+    val randomUserService: RandomUserService by inject()
+    val usuarioService: UsuarioService by inject()
 
     routing {
-        get("/") {
-            call.respondText("Hello World!")
-        }
         randomUserRoutes(randomUserService)
+        loginRoutes(usuarioService)
     }
 }
