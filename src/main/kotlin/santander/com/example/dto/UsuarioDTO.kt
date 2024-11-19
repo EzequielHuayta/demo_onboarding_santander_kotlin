@@ -1,4 +1,3 @@
-// File: src/main/kotlin/santander/com/example/dto/UsuarioDTO.kt
 package santander.com.example.dto
 
 import kotlinx.serialization.Serializable
@@ -17,6 +16,12 @@ data class UsuarioDTO (
             return UsuarioDTO(
                 legajo = legajo,
                 contrasenia = contrasenia
+            )
+        }
+
+        fun fromTarea(legajo: String): UsuarioDTO {
+            return UsuarioDTO(
+                legajo = legajo
             )
         }
     }
