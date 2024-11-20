@@ -31,6 +31,9 @@ dependencies {
     testImplementation("io.ktor:ktor-server-test-host-jvm:3.0.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
+    //CORS
+    implementation("io.ktor:ktor-server-cors-jvm:3.0.1")
+
     // database mysql
     implementation("mysql:mysql-connector-java:8.0.28")
     implementation("org.ktorm:ktorm-core:3.4.0")
@@ -54,6 +57,9 @@ dependencies {
 
     //status pages para manejo de errores
     implementation("io.ktor:ktor-server-status-pages:3.0.1")
+
+    //Para serializable date
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime-jvm:0.5.0")
 
 
 }

@@ -1,11 +1,14 @@
 package santander.com.example.dto
 
-import java.util.Date
+import kotlinx.serialization.Serializable
+import kotlinx.datetime.LocalDate
 
-data class TareaDTO (
+
+@Serializable
+data class TareaDTO(
 
     val descripcion: String,
-    val finalizado : Boolean,
-    val fechaFin: Date
+    val finalizado: Boolean,
+    val fechaFin: LocalDate?
 
 )
